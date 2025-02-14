@@ -16,15 +16,33 @@ export const englishQuestions = {
                         ],
                         correctAnswer: 0,
                         explanation: "'Affect' is typically used as a verb meaning 'to influence,' while 'effect' is typically used as a noun meaning 'a result or consequence.'"
+                    },
+                    {
+                        id: 2,
+                        type: "true-false",
+                        question: "The words 'their', 'there', and 'they're' are homophones.",
+                        correctAnswer: true,
+                        explanation: "These words sound the same but have different meanings and spellings."
                     }
-                    // ... other questions
+                ]
+            },
+            "Past & Present Tenses": {
+                questions: [
+                    {
+                        id: 1,
+                        type: "multiple",
+                        question: "Which tense is used to describe a habit or routine?",
+                        options: [
+                            "Simple Present",
+                            "Present Continuous",
+                            "Present Perfect",
+                            "Past Simple"
+                        ],
+                        correctAnswer: 0,
+                        explanation: "The Simple Present tense is used to describe habits, routines, and general truths."
+                    }
                 ]
             }
-            // ... other lessons
         }
-        // ... other units
-    },
-    second: {
-        // ... second semester structure
     }
 };
