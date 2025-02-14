@@ -25,14 +25,12 @@ class QuestionBankApp {
         this.questionArea = document.getElementById('questionArea');
         this.studyModeArea = document.getElementById('studyModeArea');
         this.questionContent = document.getElementById('questionContent');
-        this.modeToggle = document.getElementById('modeToggle');
 
         // State
         this.currentQuestions = [];
         this.currentQuestionIndex = 0;
         this.score = 0;
         this.startTime = null;
-        this.isStudyMode = false;
 
         // Bind event listeners
         this.initializeEventListeners();
@@ -44,9 +42,6 @@ class QuestionBankApp {
         this.semesterSelect.addEventListener('change', () => this.handleSemesterChange());
         this.unitSelect.addEventListener('change', () => this.handleUnitChange());
         this.lessonSelect.addEventListener('change', () => this.handleLessonChange());
-
-        // Mode toggle
-        this.modeToggle.addEventListener('change', () => this.toggleStudyMode());
 
         // Question navigation
         document.getElementById('submitBtn').addEventListener('click', () => this.submitAnswer());
@@ -208,10 +203,6 @@ class QuestionBankApp {
 
         return html;
     }
-
-    showStudyMode() {
-        this.questionArea.classList.add('hidden');
-        this.studyModeArea.classList.remove('hidden');
 
         let html = '<div class="study-content">';
         this.currentQuestions.forEach((question, index) => {
